@@ -1,1 +1,39 @@
 
+Express Server with Login and Signin Functionality
+This is an Express server with two endpoints that allow users to signin and login. The server uses JWT for authentication and authorization. The server is designed to work with a database of users, and can be easily modified to work with various database systems.
+
+Prerequisites
+Before you begin, ensure you have met the following requirements:
+
+You have Node.js installed on your local machine.
+You have a database of users.
+Installing the Server
+To install the server, follow these steps:
+
+Clone the repository to your local machine.
+Run npm install to install all dependencies.
+Create a .env file in the root directory of the project with the following variables:
+css
+Copy code
+JWT_SECRET=[your JWT secret]
+Run npm start to start the server.
+Endpoints
+Signin
+The /signin endpoint allows users to create an account. The endpoint accepts a JSON object with the following properties:
+
+username: a string representing the user's username.
+password: a string representing the user's password.
+If the username is already taken, the server will return a 300 status code with a JSON object containing the message "username already exists". If the user is successfully created, the server will return a 200 status code with a JSON object containing the user's information.
+
+Login
+The /login endpoint allows users to login to their account. The endpoint accepts a JSON object with the following properties:
+
+username: a string representing the user's username.
+password: a string representing the user's password.
+If the user does not exist or the password is incorrect, the server will return a 300 status code with a JSON object containing an error message. If the user is successfully authenticated, the server will return a 200 status code with a JSON Web Token (JWT) that can be used to authenticate future requests.
+
+Built With
+Express - The web framework used
+JWT - JSON Web Tokens for authentication and authorization
+dotenv - Environment variables management
+cors - Cross-origin resource sharing
