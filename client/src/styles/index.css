@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+.appContainer {
+  position : absolute;
+  height : 90vh;
+  overflow: auto;
+  /* Align upper-left corner to center on page. */
+  left : 50%;
+  top : 50%;
+  /* Now transform it to shift it up and left by 50% it's dimensions, thereby centering it. */
+  transform : translate(-50%, -50%);
+  /* Border. */
+  border : 2px solid #0000ff;
+  /* Round corners. */
+  border-radius : 10px 10px 10px 10px;
+  -moz-border-radius : 10px 10px 10px 10px;
+  -webkit-border-radius : 10px 10px 10px 10px;
+  /* Define grid layout. */
+  display : grid;
+  grid-template-columns : 960px 300px;
+  /* Shadow. */
+  -webkit-box-shadow : 0 0 25px 0 rgba(255, 200, 0, 0.75);
+  -moz-box-shadow : 0 0 25px 0 rgba(255, 200, 0, 0.75);
+  box-shadow : 0 0 25px 0 rgba(255, 200, 0, 0.75);
+}
+
+h1{
+  font-size: 2rem;
+  color: #1e5a95;
+}
